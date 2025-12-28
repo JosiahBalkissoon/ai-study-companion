@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function Home() {
   const [showToast, setShowToast] = useState(false);
@@ -14,13 +15,24 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
-      <main className="relative w-full max-w-3xl border border-gray-700 rounded-xl p-8 bg-black space-y-6">
+      <main className="relative w-full max-w-3xl border border-gray-700 rounded-xl p-8 bg-black space-y-6 text-center">
         
         {/* ✅ Beta badge */}
         <div className="absolute -top-3 right-6">
           <span className="rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold tracking-wide text-white">
             BETA
           </span>
+        </div>
+
+        {/* 🧠 AI Logo */}
+        <div className="flex justify-center">
+          <Image
+            src="/ai-logo.png"
+            alt="AI Study Companion logo"
+            width={96}
+            height={96}
+            priority
+          />
         </div>
 
         <h1 className="text-4xl font-bold tracking-tight">
@@ -37,7 +49,7 @@ export default function Home() {
           No account required. Your progress stays on your device.
         </p>
 
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-4 justify-center">
           <a
             href="/courses"
             onClick={() => setShowToast(true)}
