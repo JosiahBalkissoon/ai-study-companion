@@ -46,13 +46,14 @@ export default function Home() {
             Go to Courses →
           </a>
 
+          {/* 🐞 Feedback / Feature Request */}
           <a
-            href="https://docs.google.com/forms/d/e/PASTE_YOUR_FORM_LINK_HERE/viewform"
+            href="https://forms.gle/43WVnYQWNHe9NvSE8"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded border border-gray-600 px-6 py-3 font-semibold text-white hover:bg-gray-800 transition"
           >
-            Report a bug / Suggest improvement
+            Report a bug / Suggest a feature
           </a>
 
           <a
